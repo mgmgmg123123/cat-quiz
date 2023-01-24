@@ -41,7 +41,7 @@ export default function Home() {
     const res = await fetch("https://api.thecatapi.com/v1/breeds");
     const result = await res.json();
     const filteredResult: Array<catSeeds> = [];
-    result.forEach((item) => {
+    result.forEach((item: any) => {
       filteredResult.push({
         id: item.id,
         name: item.name,
@@ -54,7 +54,7 @@ export default function Home() {
   };
 
   // 正解となる、ねこちゃんを決める
-  const choiceAnswerCat = (list) => {
+  const choiceAnswerCat = (list: any) => {
     const answerCatIndex = Math.floor(Math.random() * (list.length + 1));
     setAnswerCat(list[answerCatIndex]);
     return list[answerCatIndex];
@@ -98,7 +98,7 @@ export default function Home() {
     initRestart();
   };
   // 猫ちゃんを選ぶ
-  const selectCatChange = (event) => {
+  const selectCatChange = (event: any) => {
     setSelectedCat(event.target.value);
   };
 
