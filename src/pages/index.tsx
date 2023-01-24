@@ -156,7 +156,7 @@ export default function Home() {
             ""
           )}
           {isAnswered && answerCat ? (
-            <div className={styles.answer}>
+            <div className={styles.width}>
               <h2 className={styles.h2}>正解は{answerCat.name}です</h2>
               <div className={styles.margin}>
                 <h3>解説</h3>
